@@ -1,0 +1,47 @@
+{
+  "name": "@notsoweb/vue",
+  "version": "1.0.0",
+  "description": "Estas son herramientas que facilitan iniciar una plantilla desde 0 en VUEJS. Permite mantener estados tipicos, reconocer tamaños de pantalla, y comunicación directa con su contraparte de holos-backend.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/notsoweb/vue-tools.git"
+  },
+  "keywords": [
+    "holos",
+    "vuejs"
+  ],
+  "author": "Moisés Cortés C.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/notsoweb/vue-tools/issues"
+  },
+  "homepage": "https://github.com/notsoweb/vue-tools#readme",
+  "peerDependencies": {
+    "vue": "^3.0.0",
+    "axios": "^1.11.0",
+    "pinia": "^3.0.3"
+  },
+  "dependencies": {
+    "toastr": "^2.1.4"
+  },
+  "files": [
+    "plugins",
+    "services",
+    "stores",
+    "index.js"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./Plugins/TailwindScreen": "./plugins/TailwindScreen.js",
+    "./Services/Api": "./services/Api.js",
+    "./Services/Page": "./services/Page.js",
+    "./Services/RolePermission": "./services/RolePermission.js",
+    "./Stores/Counter": "./stores/counter.js",
+    "./Stores/User": "./stores/user.js"
+  }
+}
