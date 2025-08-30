@@ -1,6 +1,6 @@
 import { reactive } from "vue";
-import { api, closeSession } from './Api.js';
-import { resetPermissions } from './RolePermission.js';
+import { api, closeSession } from './api.js';
+import { resetPermissions } from './role-permission.js';
 
 /**
  * Cache

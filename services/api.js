@@ -123,7 +123,6 @@ const api = {
         this.wasSuccessful = false;
 
         try {
-            console.log(options)
             if(options.hasOwnProperty('onStart')) {
                 options.onStart();
             }

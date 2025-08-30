@@ -24,9 +24,8 @@
   "peerDependencies": {
     "vue": "^3.0.0",
     "axios": "^1.11.0",
-    "pinia": "^3.0.3"
-  },
-  "dependencies": {
+    "pinia": "^3.0.3",
+    "luxon": "^3.7.1",
     "toastr": "^2.1.4"
   },
   "files": [
@@ -37,10 +36,11 @@
   ],
   "exports": {
     ".": "./index.js",
-    "./Plugins/TailwindScreen": "./plugins/TailwindScreen.js",
-    "./Services/Api": "./services/Api.js",
-    "./Services/Page": "./services/Page.js",
-    "./Services/RolePermission": "./services/RolePermission.js",
+    "./Plugins/TailwindScreen": "./plugins/tailwind-screen.js",
+    "./Services/Api": "./services/api.js",
+    "./Services/Page": "./services/page.js",
+    "./Services/RolePermission": "./services/role-permission.js",
+    "./Stores/Loader": "./stores/loader.js",
     "./Stores/Counter": "./stores/counter.js",
     "./Stores/User": "./stores/user.js"
   }

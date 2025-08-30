@@ -1,5 +1,5 @@
 import { ref } from 'vue';
-import { api } from './Api.js';
+import { api } from './api.js';
 
 const permissionsInit = ref(false)
 const allPermissions  = ref([])
