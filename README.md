@@ -1,23 +1,23 @@
-# @notsoweb/holos-tools
+# @notsoweb/vue
 
 > Herramientas que facilitan iniciar una plantilla desde 0 en Vue.js. Permite mantener estados típicos, reconocer tamaños de pantalla, y comunicación directa con su contraparte de holos-backend.
 
 ## 📦 Instalación
 
 ```bash
-npm install @notsoweb/holos-tools
+npm install @notsoweb/vue
 ```
 
 ## 🚀 Uso Rápido
 
 ### Importación Individual
 ```javascript
-import { api, hasPermission, TailwindScreen } from '@notsoweb/holos-tools';
+import { api, hasPermission, TailwindScreen } from '@notsoweb/vue';
 ```
 
 ### Importación Agrupada (Recomendado)
 ```javascript
-import { Api, Permissions, Screen, Forms, Page } from '@notsoweb/holos-tools';
+import { Api, Permissions, Screen, Forms, Page } from '@notsoweb/vue';
 ```
 
 ## 📚 Módulos Disponibles
@@ -27,9 +27,9 @@ import { Api, Permissions, Screen, Forms, Page } from '@notsoweb/holos-tools';
 Detecta el tamaño de pantalla basado en los breakpoints de Tailwind CSS.
 
 ```javascript
-import { Screen } from '@notsoweb/holos-tools';
+import { Screen } from '@notsoweb/vue';
 // o
-import { TailwindScreen } from '@notsoweb/holos-tools';
+import { TailwindScreen } from '@notsoweb/vue';
 
 const screen = new Screen();
 
@@ -58,7 +58,7 @@ screen.getDevice() // 'phone', 'tablet', 'pc-sm', 'pc-md', 'pc-lg'
 Servicio completo para comunicación con APIs REST.
 
 ```javascript
-import { Api, Forms } from '@notsoweb/holos-tools';
+import { Api, Forms } from '@notsoweb/vue';
 
 // Configuración de tokens
 Api.defineApiToken('your-api-token');
@@ -80,7 +80,7 @@ Api.closeSession();
 #### Formularios Reactivos
 
 ```javascript
-import { Forms } from '@notsoweb/holos-tools';
+import { Forms } from '@notsoweb/vue';
 
 const form = Forms.useForm({
     name: '',
@@ -130,7 +130,7 @@ searcher.filters  // Filtros actuales
 Gestión de estado de página y usuario.
 
 ```javascript
-import { Page } from '@notsoweb/holos-tools';
+import { Page } from '@notsoweb/vue';
 
 // Configurar usuario
 Page.defineUser({
@@ -168,7 +168,7 @@ const homeView = Page.view({
 
 ```javascript
 import { createApp } from 'vue';
-import { Page } from '@notsoweb/holos-tools';
+import { Page } from '@notsoweb/vue';
 
 const app = createApp({});
 app.use(Page.pagePlugin);
@@ -182,7 +182,7 @@ app.use(Page.pagePlugin);
 Sistema completo de permisos y roles.
 
 ```javascript
-import { Permissions } from '@notsoweb/holos-tools';
+import { Permissions } from '@notsoweb/vue';
 
 // Inicializar permisos
 await Permissions.bootPermissions();
@@ -217,7 +217,7 @@ Permissions.resetRoles();
 Sistema de notificaciones con Toastr.
 
 ```javascript
-import { Notify } from '@notsoweb/holos-tools';
+import { Notify } from '@notsoweb/vue';
 
 const notify = new Notify();
 
@@ -243,7 +243,7 @@ Stores predefinidos para Pinia.
 #### Counter Store
 
 ```javascript
-import { useCounterStore } from '@notsoweb/holos-tools/stores/counter';
+import { useCounterStore } from '@notsoweb/vue/stores/counter';
 
 const counter = useCounterStore();
 
@@ -263,7 +263,7 @@ counter.setCount(10);
 #### User Store
 
 ```javascript
-import { useUserStore } from '@notsoweb/holos-tools/stores/user';
+import { useUserStore } from '@notsoweb/vue/stores/user';
 
 const userStore = useUserStore();
 
@@ -286,41 +286,41 @@ await userStore.login({ email: 'user@example.com', password: 'password' });
 ### Exports Individuales
 ```javascript
 // Plugins
-import { TailwindScreen } from '@notsoweb/holos-tools';
+import { TailwindScreen } from '@notsoweb/vue';
 
 // API
 import { 
     api, token, apiURL, closeSession, 
     defineCsrfToken, defineApiToken, hasToken, 
     resetApiToken, useApi, useForm, useSearcher 
-} from '@notsoweb/holos-tools';
+} from '@notsoweb/vue';
 
 // Page
 import { 
     pagePlugin, page, defineApp, defineUser, 
     reloadApp, reloadUser, resetPage, logout, view 
-} from '@notsoweb/holos-tools';
+} from '@notsoweb/vue';
 
 // Permissions
 import { 
     bootPermissions, bootRoles, hasPermission, hasRole,
     reloadPermissions, reloadRoles, resetPermissions, 
     resetRoles, getAllPermissions, getAllRoles, getAllRolesIds 
-} from '@notsoweb/holos-tools';
+} from '@notsoweb/vue';
 ```
 
 ### Exports Agrupados (Alias)
 ```javascript
-import { Api, Forms, Page, Permissions, Screen } from '@notsoweb/holos-tools';
+import { Api, Forms, Page, Permissions, Screen } from '@notsoweb/vue';
 ```
 
 ### Exports Específicos
 ```javascript
 // Acceso directo a módulos específicos
-import TailwindScreen from '@notsoweb/holos-tools/Plugins/TailwindScreen';
-import { api } from '@notsoweb/holos-tools/Services/Api';
-import { page } from '@notsoweb/holos-tools/Services/Page';
-import { hasPermission } from '@notsoweb/holos-tools/Services/RolePermission';
+import TailwindScreen from '@notsoweb/vue/Plugins/TailwindScreen';
+import { api } from '@notsoweb/vue/Services/Api';
+import { page } from '@notsoweb/vue/Services/Page';
+import { hasPermission } from '@notsoweb/vue/Services/RolePermission';
 ```
 
 ## 🔧 Dependencias
@@ -347,6 +347,6 @@ MIT © [Moisés Cortés C.](https://github.com/notsoweb)
 
 ## 📞 Soporte
 
-- **Issues**: [GitHub Issues](https://github.com/notsoweb/vue-holos-tools/issues)
+- **Issues**: [GitHub Issues](https://github.com/notsoweb/vue-vue/issues)
 - **Email**: moises.cortes@notsoweb.com
-- **Documentación**: [GitHub Repository](https://github.com/notsoweb/vue-holos-tools)
+- **Documentación**: [GitHub Repository](https://github.com/notsoweb/vue-vue)
