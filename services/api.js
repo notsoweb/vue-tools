@@ -72,7 +72,7 @@ const closeSession = () => {
     resetApiToken()
     resetCsrfToken()
 
-    Notify.info(Lang('session.closed'))
+    Notify.info("La sesión a sido cerrada.")
 
     location.replace('/')
 }
@@ -163,7 +163,7 @@ const api = {
 
             // Código de sesión invalida
             if(response.status === 401 && response.data?.message == 'Unauthenticated.') {
-                Notify.error(Lang('session.expired'));
+                Notify.error("La sesión a expirado");
 
                 closeSession();
 
@@ -552,7 +552,7 @@ const useSearcher = (options = {
 
             // Código de sesión invalida
             if(response.status === 401 && response.data.message == 'Unauthenticated.') {
-                Notify.error(Lang('session.expired'));
+                Notify.error("La sesión a expirado");
                 closeSession();
                 return
             }

@@ -3,7 +3,7 @@ import toastr from 'toastr';
 class Notify {
   constructor() {}
 
-  flash({message = 'Successful registration', type = 'success', timeout = 5, title= Lang('notification')}) {
+  flash({message = 'Successful registration', type = 'success', timeout = 5, title= "Notificación"}) {
 
     toastr.options = {
         "closeButton": true,

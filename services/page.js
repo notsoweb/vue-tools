@@ -111,7 +111,7 @@ const logout = () => {
         if(r.is_revoked === true) {
           closeSession()
 
-          location.replace('/')
+          location.replace('/auth')
         }
       }
     });

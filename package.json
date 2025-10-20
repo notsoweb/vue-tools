@@ -22,10 +22,12 @@
   },
   "homepage": "https://github.com/notsoweb/vue-tools#readme",
   "peerDependencies": {
-    "vue": "^3.0.0",
     "axios": "^1.11.0",
-    "pinia": "^3.0.3",
     "luxon": "^3.7.1",
+    "pinia": "^3.0.3",
+    "vue": "^3.0.0"
+  },
+  "dependencies": {
     "toastr": "^2.1.4"
   },
   "files": [
@@ -36,12 +38,15 @@
   ],
   "exports": {
     ".": "./index.js",
+    "./css/notify.css": "./css/notify.css",
     "./Plugins/TailwindScreen": "./plugins/tailwind-screen.js",
+    "./Plugins/Notify": "./plugins/notify.js",
     "./Services/Api": "./services/api.js",
     "./Services/Page": "./services/page.js",
     "./Services/RolePermission": "./services/role-permission.js",
+    "./Stores/LeftSidebar": "./stores/left-sidebar.js",
     "./Stores/Loader": "./stores/loader.js",
-    "./Stores/Counter": "./stores/counter.js",
+    "./Stores/RightSidebar": "./stores/right-sidebar.js",
     "./Stores/User": "./stores/user.js"
   }
 }
