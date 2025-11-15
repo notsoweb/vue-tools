@@ -1,6 +1,6 @@
 {
   "name": "@notsoweb/vue",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Estas son herramientas que facilitan iniciar una plantilla desde 0 en VUEJS. Permite mantener estados tipicos, reconocer tamaños de pantalla, y comunicación directa con su contraparte de holos-backend.",
   "main": "index.js",
   "type": "module",
@@ -31,6 +31,7 @@
     "toastr": "^2.1.4"
   },
   "files": [
+    "css",
     "plugins",
     "services",
     "stores",
