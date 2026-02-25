@@ -154,10 +154,11 @@ const api = {
             if(options.hasOwnProperty('onFinish')) {
                 options.onFinish(data.data);
             }
-        } catch (error) {
-            console.error(error)
 
+            this.processing = false;
+        } catch (error) {
             this.hasErrors = true;
+            this.processing = false;
 
             let { response } = error
 
@@ -173,8 +174,6 @@ const api = {
             // Fallas
             if(failCodes.includes(response.status)) {
                 options.hasOwnProperty('onFail')
-                    // ? options.onFail(response.data.data)
-                    // : Notify.warning(response.data.errors.message);
 
                 if(response.data?.errors != null) {
                     this.errors = response.data.errors;
@@ -187,7 +186,6 @@ const api = {
                 return
             }
             
-
             if(options.hasOwnProperty('onError')) {
                 options.onError(response.data);
             }
@@ -196,8 +194,6 @@ const api = {
                 this.errors = response.data.errors;
             }
         }
-
-        this.processing = false;
     },
     get(url, options) {
         this.load({
